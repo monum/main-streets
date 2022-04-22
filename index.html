@@ -54,6 +54,23 @@
             'line-color': '#333',
             'line-width': 1
         }
+            
+    map.on('click', 'states-layer', (e) => {
+        new mapboxgl.Popup()
+            .setLngLat(e.lngLat)
+            .setHTML("<strong>" + e.features[0].properties.NAME + " Main Street</strong>")
+            .addTo(map);
+    });
+ 
+
+    map.on('mouseenter', 'states-layer', () => {
+        map.getCanvas().style.cursor = 'pointer';
+    });
+ 
+
+    map.on('mouseleave', 'states-layer', () => {
+        map.getCanvas().style.cursor = '';
+    });
     });
     });
 </script>
