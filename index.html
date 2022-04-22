@@ -51,26 +51,26 @@
             'source': 'ms',
             'layout': {},
             'paint': {
-            'line-color': '#333',
-            'line-width': 1
-        }
-            
-    map.on('click', 'ms-fill', (e) => {
-        new mapboxgl.Popup()
-            .setLngLat(e.lngLat)
-            .setHTML("<strong>Main Street</strong>")
-            .addTo(map);
-    });
+                'line-color': '#333',
+                'line-width': 1
+            }
+        });
 
-    map.on('mouseenter', 'ms-fill', () => {
-        map.getCanvas().style.cursor = 'pointer';
-    });
- 
+        map.on('click', 'ms-fill', (e) => {
+            new mapboxgl.Popup()
+                .setLngLat(e.lngLat)
+                .setHTML("<strong>Main Street</strong>")
+                .addTo(map);
+        });
 
-    map.on('mouseleave', 'ms-fill', () => {
-        map.getCanvas().style.cursor = '';
-    });
-    });
+        map.on('mouseenter', 'ms-fill', () => {
+            map.getCanvas().style.cursor = 'pointer';
+        });
+     
+
+        map.on('mouseleave', 'ms-fill', () => {
+            map.getCanvas().style.cursor = '';
+        });
     });
 </script>
  
