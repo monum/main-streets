@@ -58,7 +58,7 @@
     map.on('click', 'ms-fill', (e) => {
         new mapboxgl.Popup()
             .setLngLat(e.lngLat)
-            .setHTML("<strong>" + e.features[0].properties.NAME + " Main Street</strong>")
+            .setHTML("<strong>Main Street</strong>")
             .addTo(map);
     });
 
